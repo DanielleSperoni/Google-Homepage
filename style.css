@@ -1,0 +1,268 @@
+/* Google Homepage */
+
+body {
+  font-family: arial, sans-serif;
+  font-size: small;
+}
+
+/* get header, footer, main positions */
+html, body { height: 100%; }
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main {
+  flex: 1;
+}
+
+/* header, footer positions */
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* header formatting */
+.header {
+  padding: 6px;
+}
+.header__right {
+  padding: 0px 4px 0px 32px;
+  display: flex;
+}
+.header__about {
+  margin: 0px 5px 0px 15px;
+  padding: 5px;
+}
+.header__store {
+  margin: 0px 5px;
+  padding: 5px;
+}
+.header__gmail, .header__images {
+  padding: 0px 15px 0px 0px;
+  display: flex;
+  align-items: center;  
+}
+
+/* btn sign-in decoration */
+.btn__sign-in {
+  border-radius: 5px;
+  background-color: #1A73E8;
+  color: white;
+  padding: 9px 23px;
+  margin: 0px 8px;
+  border: none;
+}
+
+/* footer formatting */
+.footer {
+  padding: 0px 20px;
+  background-color: rgb(235, 235, 235);
+}
+.leaf-image {
+  height: 20px;
+}
+.footer__center {
+  padding: 15px;
+  padding-top: 10px;
+}
+.footer__privacy-link, .footer__terms-link, .footer__settings-link {
+  padding: 15px;
+}
+.footer__advertising-link, .footer__business-link, .footer__search-link {
+  padding: 15px;
+}
+
+/* footer formatting by screensize*/
+@media (max-width: 600px) {
+  .footer {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (max-width: 1200px) {
+  .footer {
+    padding: 5px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .footer-center {
+    order: -1;
+    flex: 1 0 100%;
+  }
+}
+
+/* link decoration - header */
+.header a:link {
+  text-decoration: none;
+  color: #202124;
+}
+.header a:visited {
+  color: #202124;
+}
+.header a:hover {
+  text-decoration: underline;
+}
+/* link decoration - footer */
+.footer a:link {
+  text-decoration: none;
+  color: #70757a;
+}
+.footer a:visited {
+  color: #70757a;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* main container positioning */
+.main {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 36.9% 24.8% 38.3%;
+}
+
+
+
+
+.google {
+  --google-blue: #1A73E8;
+  --google-red: #db3236;
+  --google-yellow: #f4c20d;
+  --google-green: #3cba54;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.google__g {
+  color: var(--google-blue);
+}
+.google__o-first {
+  color: var(--google-red);
+}
+.google__o-second {
+  color: var(--google-yellow);
+}
+.google__l {
+  color: var(--google-green);
+}
+.google__e {
+  color: var(--google-red);
+}
+.google__g, .google__o, .google__l, .google__e {
+  font-weight: 500;
+  font-size: 5rem;
+}
+
+
+
+/* search formatting */
+.row-two {
+  display: flex;
+  justify-content: center;
+}
+.search-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.search-bar-container {
+  min-width: 100%;
+
+  display: flex;
+  flex: 1;
+  padding: 5px 8px 0 16px;
+  padding-left: 14px;
+
+  max-height: 2px;
+}
+
+.text-input {
+  border: 1px solid #97a1a8;
+  margin: 0;
+  padding: 0;
+  color: rgba(0,0,0,.87);
+  outline: none;
+  display: flex;
+  flex: 100%;
+  margin-top: -37px;
+  height: 34px;
+  font-size: 16px;
+  min-width: 100%;
+  width: 400px;
+  border-radius: 24px;
+}
+.search-btns {
+  display: flex;
+}
+.search {
+  border: none;
+}
+.search-btn__style {
+  border: 1px solid #f8f9fa;
+  background-color: #f8f9fa;
+  color: #3c4043;
+  border-radius: 4px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+/* bento box menu */
+.circle {
+  width: 4px;
+  height: 4px;
+  margin: 1px;
+  border-radius: 50%;
+  background-color: #5f6368;
+  font-weight: bold;
+}
+.bento-maker {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+}
+.bento-image {
+  padding: 4px;
+}
+
+/* adding search icons to .text-input */
+.text-input {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* search-icon */ /* search-label */ /* microphone-icon */
+.search-label {
+  width: 90%;
+}
+.search {
+  width: 100%;
+}
+.search-icon, .microphone-icon {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.fa-search {
+  color:  #70757a;
+}
+.fa-microphone {
+  color: hsla(214, 82%, 51%, 0.774);
+}
